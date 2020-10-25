@@ -1,0 +1,95 @@
+{
+  "name": "@johanbook/react-canvas",
+  "version": "0.0.1",
+  "author": "Johan Book",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johanbook/react-canvas.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johanbook/react-canvas/issues"
+  },
+  "homepage": "https://github.com/johanbook/react-canvas#readme",
+  "scripts": {
+    "build": "rm -rf dist && mkdir dist && cp -r package.json assets/ dist/ && npm run transpile",
+    "build:docs": "styleguidist build",
+    "format": "prettier --write --prose-wrap always src/**/*",
+    "lint": "eslint 'src/**/*.{js,ts}' --max-warnings 0 --rule 'no-console: 2'",
+    "release": "standard-version",
+    "serve": "styleguidist server",
+    "test": "react-scripts test",
+    "test:ci": "CI=true npm run test",
+    "test:coverage": "CI=true npm test -- --coverage",
+    "transpile": "babel src -d dist --extensions '.js,.jsx,.ts,.tsx' --ignore 'src/**/*.test.js*'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run lint && npm run test:ci"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-proposal-optional-chaining",
+      "@babel/plugin-transform-runtime"
+    ],
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@welldone-software/why-did-you-render": "^4.3.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.3",
+    "react-styleguidist": "^11.1.1",
+    "react-test-renderer": "^16.13.1",
+    "standard-version": "^9.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
