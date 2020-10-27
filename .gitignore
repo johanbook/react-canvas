@@ -3,11 +3,10 @@
 /.pnp
 .pnp.js
 
-# testing
-/coverage
-
-# production
-/build
+build
+coverage
+dist
+styleguide
 
 # misc
 .DS_Store
