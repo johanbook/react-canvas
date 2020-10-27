@@ -1,8 +1,12 @@
 # @johanbook/react-canvas
 
+![](https://img.shields.io/travis/johanbook/react-canvas)
+![](https://img.shields.io/npm/v/@johanbook/react-canvas)
+
 This library aims to make it easier to draw on HTML canvases.
 
 Install it using
+
 ```sh
 npm install @johanbook/react-canvas
 ```
