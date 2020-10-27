@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '12.13'
+deploy:
+  provider: npm
+  email: johanbook@hotmail.com
+  api_key:
+    secure: WBynFpNpZVVqeAQW8V0/AvEfQ5U9BqOZyDGHf+0adAxp9H8eVwwLQARcgXQnVRKK/Vysk5tw6fdf+Che92wQCKMO2rsRa9dP4pVW5OH/KroNvuYf4NJjmZIW+UgXqoTZi4/EUxit5lyDmn7hNA5sfsKReeEa+x4d3saSJB60kk/3XgqTyIiDC+RgtXRJmIO07WJya6c/kdcE6oRmaZDwnRHor5xGi9LzHoEGIFgdpR43b4y//Vfqdr8ywvMRlRlyqG1lfBQUa2oec7H3mhhFFXufx7yxVUJfpJLEeeq9jVYfHfoAB63Xd/uRP5agOBDDmjbL9K6lUYSjTJpNXWqXbSLk5OmuY+FBM/f71tS05dSWnXgPQ5uPZX/jv9Ua/JiClMTVUkuePybb2azNWH3wof+pQN8LdLhW3Mj4YvPMdxnw64dGkiLjcZ39GgeoG5LS/1+UDv4NV2DTlflumE4UtwHZ61pDCCLLzBfAcmRUCp7ATsPABlPNbM3lPqzdT21bJpEKDdHkf9S26Y5VNNo5dl+h8tEMokHYhKBB1NtFAKHfeKFBGXfQCOJQif47dEDIn8cf6eIlF3vLovPLlViiNXn/JAZ2HZVHueXL0YFsFLf3JgrLqahBkoip6v8YESbCrRQGJo0nLUfodARrfrGgo8Y+0wszjAuCyI3hJqCj2ro=
+  on:
+    tags: true
+    repo: johanbook/react-canvas
+    branch: main
+  skip_cleanup: 'true'
