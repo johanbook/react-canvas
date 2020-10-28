@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/johanbook/react-canvasbuild/main.202c8ac4.js",
-    "runtime-main.js": "/johanbook/react-canvasbuild/bundle.d9c9ee50.js",
-    "build/2.5ccdf534.js": "/johanbook/react-canvasbuild/2.5ccdf534.js",
-    "build/2.5ccdf534.js.LICENSE.txt": "/johanbook/react-canvasbuild/2.5ccdf534.js.LICENSE.txt",
-    "index.html": "/johanbook/react-canvasindex.html",
-    "precache-manifest.f8556ac0f45adf42c24c9f37556ea138.js": "/johanbook/react-canvasprecache-manifest.f8556ac0f45adf42c24c9f37556ea138.js",
-    "service-worker.js": "/johanbook/react-canvasservice-worker.js"
+    "main.js": "/react-canvas/build/main.202c8ac4.js",
+    "runtime-main.js": "/react-canvas/build/bundle.d9c9ee50.js",
+    "build/2.6d6ae30b.js": "/react-canvas/build/2.6d6ae30b.js",
+    "build/2.6d6ae30b.js.LICENSE.txt": "/react-canvas/build/2.6d6ae30b.js.LICENSE.txt",
+    "index.html": "/react-canvas/index.html",
+    "precache-manifest.0d527e042045302d45ea505d717fa50d.js": "/react-canvas/precache-manifest.0d527e042045302d45ea505d717fa50d.js",
+    "service-worker.js": "/react-canvas/service-worker.js"
   },
   "entrypoints": [
     "build/bundle.d9c9ee50.js",
-    "build/2.5ccdf534.js",
+    "build/2.6d6ae30b.js",
     "build/main.202c8ac4.js"
   ]
 }
