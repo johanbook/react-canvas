@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/johanbook/react-canvas/issues"
   },
-  "homepage": "https://github.com/johanbook/react-canvas#readme",
+  "homepage": "https://johanbook.github.io/react-canvas",
   "scripts": {
     "build": "rm -rf dist && mkdir dist && cp -r package.json assets/ dist/ && npm run transpile",
     "build:docs": "styleguidist build",

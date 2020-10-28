@@ -5,11 +5,15 @@
 
 This library aims to make it easier to draw on HTML canvases.
 
+## Install
+
 Install it using
 
 ```sh
 npm install @johanbook/react-canvas
 ```
+
+## Basic usage
 
 We can create a simple wave as
 
