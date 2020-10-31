@@ -39,7 +39,9 @@ const handleUpdateItem = (item, t) => {
   height={100}
   onUpdateItem={handleUpdateItem}
 >
+  <center>
   <h2>react-canvas</h2>
   <p>Simplfy your use of <code>Canvas</code></p>
+  </center>
 </ResponsiveCanvas>
 ```

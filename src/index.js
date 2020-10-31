@@ -9,3 +9,13 @@ export function createItems(number) {
 
   return items;
 }
+
+/** Create 2-dimensional grid */
+export function createGrid(numX, numY) {
+  const items = [];
+  for (let i = 0; i < numX; i++)
+    for (let j = 0; j < numX; j++) {
+      items.push({ x: i / numX, y: j / numY });
+    }
+  return items;
+}
