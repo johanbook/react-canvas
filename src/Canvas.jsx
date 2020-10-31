@@ -3,25 +3,28 @@ import PropTypes from "prop-types";
 
 import Renderer from "./renderer";
 
+const defaultRenderOptions = {
+  clearOnUpdate: true,
+  defaultColor: "rgb(150,150,150,0.8)",
+  fps: 24,
+  transform: null,
+  virtualHeight: 1,
+  virtualWidth: 1,
+};
+
 /** A Canvas with simplified rendering functions */
 export default function Canvas({
   items,
   height,
   onUpdate = () => {},
   onUpdateItem = () => {},
-  renderOptions = {
-    clearOnUpdate: true,
-    defaultColor: "rgb(150,150,150,0.8)",
-    fps: 24,
-    transform: null,
-    virtualHeight: 1,
-    virtualWidth: 1,
-  },
+  renderOptions = {},
   style,
   width,
   ...props
 }) {
   const canvas = useRef();
+  const _renderOptions = { ...defaultRenderOptions, ...renderOptions };
 
   useEffect(() => {
     // Do not create renderer if sizing is not complete
@@ -31,7 +34,7 @@ export default function Canvas({
 
     const renderer = new Renderer(canvas.current);
     const timer = setInterval(() => {
-      renderer.render(items, { ...renderOptions, onUpdate, onUpdateItem });
+      renderer.render(items, { ..._renderOptions, onUpdate, onUpdateItem });
     }, 1000 / renderOptions.fps);
 
     return () => clearInterval(timer);
@@ -42,7 +45,7 @@ export default function Canvas({
       ref={canvas}
       height={height}
       width={width}
-      style={{ zIndex: 1, ...style }}
+      style={{ zIndex: -1, ...style }}
       {...props}
     />
   );
