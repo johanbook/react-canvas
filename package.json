@@ -1,6 +1,6 @@
 {
   "name": "@johanbook/react-canvas",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Johan Book",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   },
   "homepage": "https://johanbook.github.io/react-canvas",
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && cp -r package.json assets/ dist/ && npm run transpile",
+    "build": "rm -rf dist && mkdir dist && cp -r package.json README.md dist/ && npm run transpile",
     "build:docs": "styleguidist build",
     "format": "prettier --write --prose-wrap always src/**/*",
     "lint": "eslint 'src/**/*.{js,ts}' --max-warnings 0 --rule 'no-console: 2'",
