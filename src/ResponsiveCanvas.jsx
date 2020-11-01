@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
 
-import Canvas from "./Canvas";
+import Canvas, { propTypes } from "./Canvas";
 
 /** A responsive wrapper around `<Canvas/>` */
 export default function ResponsiveCanvas({
   children,
   className,
-  div = false,
+  overlay,
   style,
   ...props
 }) {
@@ -20,15 +21,28 @@ export default function ResponsiveCanvas({
     setWidth(ref.current.offsetWidth);
   }, [setWidth]);
 
-  const divStyle = {};
-  if (div) {
-    divStyle.position = "absolute";
+  const canvasStyle = {};
+  if (overlay === undefined) {
+    overlay = Boolean(children);
+  }
+  if (overlay) {
+    canvasStyle.position = "absolute";
   }
 
   return (
-    <div className={className} ref={ref} style={style}>
-      <Canvas height={height} width={width} style={divStyle} {...props} />
+    <div
+      className={className}
+      ref={ref}
+      style={{ height: "100%", width: "100%", ...style }}
+    >
+      <Canvas height={height} width={width} style={canvasStyle} {...props} />
       <div className={classes.children}>{children}</div>
     </div>
   );
 }
+
+ResponsiveCanvas.propypes = {
+  ...propTypes,
+  /** If children should overlay canvas */
+  overlay: PropTypes.bool,
+};

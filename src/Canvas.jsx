@@ -51,7 +51,7 @@ export default function Canvas({
   );
 }
 
-Canvas.propTypes = {
+export const propTypes = {
   /** Rendered items */
   items: PropTypes.arrayOf(
     PropTypes.exact({
@@ -90,3 +90,5 @@ Canvas.propTypes = {
   /** Width of canvas */
   width: PropTypes.number.isRequired,
 };
+
+Canvas.propTypes = propTypes;
